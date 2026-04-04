@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Mock detail 1">
+  <rect width="1600" height="900" fill="#121218"/>
+  <rect x="80" y="80" width="1440" height="740" rx="24" fill="#1c1c28" stroke="rgba(146,164,255,0.2)" stroke-width="2"/>
+  <text x="800" y="470" text-anchor="middle" fill="rgba(240,240,240,0.28)" font-family="system-ui,sans-serif" font-size="26">MOCK � DETAIL 1</text>
+</svg>
