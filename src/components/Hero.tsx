@@ -34,56 +34,53 @@ export function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative flex min-h-screen flex-col items-center justify-center px-margin-mobile pt-32 text-center md:px-margin-desktop"
+      className="relative flex min-h-screen flex-col items-center justify-center px-margin-mobile pt-28 text-center md:px-margin-desktop md:pt-32"
     >
-      <div className="pointer-events-none absolute inset-0 pixel-grid opacity-30" />
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[600px] w-full -translate-x-1/2 -translate-y-1/2" />
+      <div className="pointer-events-none absolute inset-0 brand-pattern hero-pattern-fade opacity-20" />
+      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-background to-transparent" />
 
       <div className="relative z-10 mx-auto max-w-4xl space-y-stack-lg">
         <div
           data-hero-item
-          className="mb-4 inline-block rounded-full bg-surface-container px-4 py-1.5 font-label-caps text-label-caps text-primary motion-safe:animate-bounce"
+          className="mb-4 inline-block rounded-full border border-outline-variant/30 bg-surface/80 px-5 py-2 font-label-caps text-label-caps text-primary shadow-sm backdrop-blur-sm"
         >
-          DIGITAL DESIGN STUDIO
+          FULL-SERVICE DIGITAL AGENCY
         </div>
         <h1
           data-hero-item
           className="font-display-lg text-display-lg-mobile uppercase leading-none tracking-tighter md:text-display-lg"
         >
-          Together, we <span className="text-stroke">CAN.</span>
+          Together, we <span className="text-stroke-glow">CAN.</span>
         </h1>
         <p
           data-hero-item
-          className="mx-auto max-w-2xl font-body-lg text-body-lg text-on-surface-variant"
+          className="mx-auto max-w-2xl font-body-lg text-body-lg leading-relaxed text-on-surface-variant"
         >
-          Your vision, our design – building stronger digital brands through
-          high-fidelity visual narratives and architectural clarity.
+          Your vision, our design — together, we can. We build stronger digital
+          brands through high-fidelity visual narratives and architectural
+          clarity.
         </p>
         <div
           data-hero-item
           className="flex flex-wrap justify-center gap-4 pt-stack-lg"
         >
-          <a
-            href="#contact"
-            className="transform rounded-full bg-primary px-10 py-5 font-label-caps text-label-caps text-on-primary transition-all hover:-translate-y-1 hover:bg-secondary"
-          >
+          <a href="#contact" className="btn-primary">
             Elevate Your Brand
           </a>
-          <a
-            href="#work"
-            className="rounded-full border border-outline px-10 py-5 font-label-caps text-label-caps transition-all hover:bg-surface-container"
-          >
+          <a href="#work" className="btn-secondary">
             View Our Work
           </a>
         </div>
       </div>
 
-      <div className="absolute bottom-10 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 opacity-50">
-        <span className="font-label-caps text-[10px] tracking-widest">
-          SCROLL
-        </span>
-        <div className="h-12 w-px bg-primary" />
-      </div>
+      <a
+        href="#about"
+        className="absolute bottom-10 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 opacity-40 transition-opacity hover:opacity-70 motion-safe:animate-pulse"
+        aria-label="Scroll to about section"
+      >
+        <span className="font-label-caps text-[10px] tracking-widest">SCROLL</span>
+        <div className="h-12 w-px bg-brand-gradient" />
+      </a>
     </section>
   );
 }

@@ -14,20 +14,109 @@
       "GRAD" 0,
       "opsz" 24;
   }
+
+  a:focus-visible,
+  button:focus-visible {
+    @apply outline-none ring-2 ring-brand-purple ring-offset-2 ring-offset-background;
+  }
 }
 
-.pixel-grid {
-  background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
-  background-size: 24px 24px;
+@layer components {
+  .section-eyebrow {
+    @apply mb-stack-md inline-block font-label-caps text-label-caps tracking-widest text-brand-purple;
+  }
+
+  .section-title {
+    @apply font-headline-xl text-headline-xl uppercase tracking-tighter;
+  }
+
+  .btn-primary {
+    @apply inline-flex transform items-center justify-center rounded-full bg-primary px-10 py-4 font-label-caps text-label-caps text-on-primary transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-gradient hover:shadow-lg hover:shadow-brand-purple/25 active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-full border border-outline-variant bg-transparent px-10 py-4 font-label-caps text-label-caps transition-all duration-300 hover:border-brand-purple hover:bg-surface-container;
+  }
+
+  .card-elevated {
+    @apply rounded-2xl border border-outline-variant/40 bg-surface shadow-sm transition-all duration-500 hover:border-brand-purple/40 hover:shadow-xl hover:shadow-brand-purple/10;
+  }
+
+  .link-underline {
+    @apply relative transition-colors duration-300 hover:text-primary;
+  }
+
+  .link-underline::after {
+    @apply absolute -bottom-0.5 left-0 h-px w-0 bg-brand-gradient transition-all duration-300 content-[''];
+  }
+
+  .link-underline:hover::after,
+  .link-underline[data-active='true']::after {
+    @apply w-full;
+  }
+}
+
+.brand-pattern {
+  background-image: url("/brand/pattern-dark.png");
+  background-size: 200px 200px;
+  background-repeat: repeat;
+}
+
+.hero-pattern-fade {
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.15) 12%,
+    rgba(0, 0, 0, 0.6) 35%,
+    black 55%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.15) 12%,
+    rgba(0, 0, 0, 0.6) 35%,
+    black 55%
+  );
+}
+
+.text-stroke-glow {
+  -webkit-text-stroke: 1px #b890f4;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 6px rgba(184, 144, 244, 0.55))
+    drop-shadow(0 0 18px rgba(146, 164, 255, 0.35));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .text-stroke-glow {
+    animation: can-glow 3s ease-in-out infinite;
+  }
+}
+
+@keyframes can-glow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 6px rgba(184, 144, 244, 0.55))
+      drop-shadow(0 0 18px rgba(146, 164, 255, 0.35));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(184, 144, 244, 0.75))
+      drop-shadow(0 0 28px rgba(146, 164, 255, 0.5));
+  }
+}
+
+.brand-pattern-purple {
+  background-image: url("/brand/pattern-purple.png");
+  background-size: 200px 200px;
+  background-repeat: repeat;
 }
 
 .text-stroke {
-  -webkit-text-stroke: 1px currentColor;
+  -webkit-text-stroke: 1px #b890f4;
   -webkit-text-fill-color: transparent;
 }
 
 ::selection {
-  @apply bg-secondary text-on-primary;
+  @apply bg-brand-purple text-on-primary;
 }
 
 @media (prefers-reduced-motion: reduce) {

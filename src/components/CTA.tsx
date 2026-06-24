@@ -11,24 +11,26 @@ export function CTA() {
       id="contact"
       className="mx-auto max-w-container-max scroll-mt-24 px-margin-mobile py-section-gap-mobile md:px-margin-desktop md:py-section-gap"
     >
-      <div className="relative overflow-hidden rounded-[40px] bg-primary p-10 text-center md:p-20">
-        <div className="absolute inset-0 opacity-40" />
-        <div className="relative z-10 mx-auto max-w-3xl">
+      <div className="relative overflow-hidden rounded-[40px] bg-brand-gradient p-10 shadow-2xl shadow-brand-purple/30 md:p-20">
+        <div className="pointer-events-none absolute inset-0 brand-pattern opacity-15" />
+        <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/10 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-brand-purple/20 blur-3xl" />
+
+        <div className="relative z-10 mx-auto max-w-3xl text-center">
           <h2 className="mb-stack-lg font-display-lg text-display-lg-mobile tracking-tighter text-on-primary md:text-display-lg">
-            Let&apos;s Collaborate and Create. Achieve Powerful Results.
+            Your vision. Our design. Let&apos;s build.
           </h2>
-          <p className="mb-12 font-body-lg text-on-primary/70">
+          <p className="mb-12 font-body-lg leading-relaxed text-on-primary/85">
             Start your journey toward a stronger digital presence with a team
             that values your vision as much as you do.
           </p>
           <a
             href="mailto:hello@kanagency.design"
-            className="inline-block transform rounded-full bg-on-primary px-12 py-5 font-label-caps text-label-caps text-primary transition-all hover:scale-105 hover:bg-secondary hover:text-white"
+            className="btn-primary !bg-on-primary !text-primary hover:!bg-on-primary hover:!shadow-xl hover:!shadow-primary/20"
           >
             Get in touch now
           </a>
         </div>
-        <div className="pointer-events-none absolute bottom-0 left-0 h-1/2 w-full pixel-grid opacity-10" />
       </div>
     </section>
   );

@@ -13,13 +13,12 @@ export function Expertise() {
       id="expertise"
       className="relative scroll-mt-24 overflow-hidden bg-surface-container py-section-gap-mobile md:py-section-gap"
     >
-      <div className="pointer-events-none absolute right-0 top-0 h-full w-1/3 rotate-12 transform pixel-grid opacity-20" />
+      <div className="pointer-events-none absolute -right-20 top-0 h-full w-1/2 rotate-6 brand-pattern-purple opacity-10" />
       <div className="relative z-10 mx-auto max-w-container-max px-margin-mobile md:px-margin-desktop">
         <div className="mx-auto mb-20 max-w-3xl text-center">
-          <h2 className="mb-stack-md font-headline-xl text-headline-xl uppercase tracking-tighter">
-            My Expertise
-          </h2>
-          <p className="font-body-lg text-on-surface-variant">
+          <span className="section-eyebrow">WHAT WE DO</span>
+          <h2 className="section-title mb-stack-md">Our Expertise</h2>
+          <p className="font-body-lg leading-relaxed text-on-surface-variant">
             We bridge the gap between creative imagination and technical
             execution through three core pillars of excellence.
           </p>
@@ -29,21 +28,25 @@ export function Expertise() {
           {expertiseCards.map((card) => (
             <div
               key={card.title}
-              className="group relative flex h-[400px] flex-col border border-outline-variant/50 bg-surface p-stack-lg transition-colors hover:border-primary"
+              className="card-elevated group relative flex min-h-[320px] flex-col border-l-4 border-l-transparent p-8 pt-16 hover:-translate-y-1 hover:border-l-brand-purple"
             >
-              <div className="absolute right-4 top-4 text-outline-variant transition-colors group-hover:text-primary">
-                <MaterialIcon name={card.icon} className="text-4xl" />
+              <div className="absolute right-5 top-5 text-outline-variant transition-all duration-300 group-hover:scale-110 group-hover:text-brand-purple">
+                <MaterialIcon
+                  name={card.icon}
+                  className="text-4xl"
+                  aria-hidden
+                />
               </div>
-              <div className="absolute bottom-4 left-4 font-label-caps text-label-caps text-outline-variant">
+              <span className="absolute left-5 top-5 font-label-caps text-label-caps text-outline-variant">
                 {card.index}
-              </div>
+              </span>
               <h3 className="mb-stack-md mt-auto font-headline-md text-headline-md">
                 {card.title}
               </h3>
-              <p className="mb-stack-lg font-body-md text-on-surface-variant">
+              <p className="mb-stack-lg font-body-md leading-relaxed text-on-surface-variant">
                 {card.description}
               </p>
-              <div className="h-0.5 w-12 bg-primary transition-all duration-500 group-hover:w-full" />
+              <div className="h-0.5 w-12 rounded-full bg-brand-gradient transition-all duration-500 group-hover:w-full" />
             </div>
           ))}
         </div>
