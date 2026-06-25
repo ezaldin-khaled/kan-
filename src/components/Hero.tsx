@@ -50,7 +50,10 @@ export function Hero() {
           data-hero-item
           className="font-display-lg text-display-lg-mobile uppercase leading-none tracking-tighter md:text-display-lg"
         >
-          Together, we <span className="text-stroke-glow">CAN.</span>
+          Together, we{" "}
+          <span className="bg-brand-gradient bg-clip-text text-transparent">
+            KAN.
+          </span>
         </h1>
         <p
           data-hero-item

@@ -79,31 +79,6 @@
   );
 }
 
-.text-stroke-glow {
-  -webkit-text-stroke: 1px #b890f4;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 6px rgba(184, 144, 244, 0.55))
-    drop-shadow(0 0 18px rgba(146, 164, 255, 0.35));
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .text-stroke-glow {
-    animation: can-glow 3s ease-in-out infinite;
-  }
-}
-
-@keyframes can-glow {
-  0%,
-  100% {
-    filter: drop-shadow(0 0 6px rgba(184, 144, 244, 0.55))
-      drop-shadow(0 0 18px rgba(146, 164, 255, 0.35));
-  }
-  50% {
-    filter: drop-shadow(0 0 10px rgba(184, 144, 244, 0.75))
-      drop-shadow(0 0 28px rgba(146, 164, 255, 0.5));
-  }
-}
-
 .brand-pattern-purple {
   background-image: url("/brand/pattern-purple.png");
   background-size: 200px 200px;
