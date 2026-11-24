@@ -1,0 +1,35 @@
+# KAN
+
+> KAN is a software, marketing, and brand studio. We design, build, and grow web apps, brand systems, and marketing programs. The studio is led by founders K, A, and N. Clients include companies in the United Arab Emirates and teams that work with us remotely.
+
+This file is for agent discovery (coding agents and tools that look for llms.txt). Google Search does not use it. It does not change rankings or guarantee AI citations.
+
+## Site
+
+- Home: https://wearekan.com/
+- About: https://wearekan.com/about
+- Services: https://wearekan.com/services
+- Contact form: https://wearekan.com/contact
+- Process: https://wearekan.com/process
+- Case studies: https://wearekan.com/case-studies
+- FAQ: https://wearekan.com/faq
+- Insights: https://wearekan.com/blog
+
+## Services
+
+- Web and app development: https://wearekan.com/services/web-app-development
+- Digital marketing: https://wearekan.com/services/digital-marketing
+- Brand identity: https://wearekan.com/services/brand-identity
+- AI automation: https://wearekan.com/services/ai-automation
+- Growth strategy: https://wearekan.com/services/growth-strategy
+
+## Audiences
+
+- Startups: https://wearekan.com/for/startups
+- Ecommerce: https://wearekan.com/for/ecommerce
+- Real estate: https://wearekan.com/for/real-estate
+- Healthcare: https://wearekan.com/for/healthcare
+
+## Contact
+
+Use the contact form at https://wearekan.com/contact. Public replies go out from the studio mailbox. Private Founders, portal, and crew apps live under /k7n/ and are not for public crawling.

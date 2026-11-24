@@ -1,7 +1,7 @@
 import { renderToStaticMarkup } from "react-dom/server";
 import { StaticRouter } from "react-router";
 import App from "./App";
-import { headFor, publicPaths } from "./seo/meta";
+import { headFor, publicPaths, sitemapEntries } from "./seo/meta";
 
 export function render(url: string) {
   const pathname = url.split("?")[0] || "/";
@@ -16,4 +16,4 @@ export function render(url: string) {
   return { html, head: headFor(pathname) };
 }
 
-export { publicPaths };
+export { publicPaths, sitemapEntries };

@@ -230,3 +230,18 @@ export const publicPaths = [
   "/process",
   ...stories.map((story) => story.path),
 ].filter((path) => !path.startsWith("/k7n"));
+
+/** Default lastmod for pages without a story date (YYYY-MM-DD). */
+export const SITE_LASTMOD = "2026-11-24";
+
+export function lastmodFor(pathname: string): string {
+  const path = pathname.length > 1 ? pathname.replace(/\/$/, "") : pathname || "/";
+  return storyByPath(path)?.updated ?? SITE_LASTMOD;
+}
+
+export type SitemapEntry = { path: string; lastmod: string };
+
+export const sitemapEntries: SitemapEntry[] = publicPaths.map((path) => ({
+  path,
+  lastmod: lastmodFor(path),
+}));

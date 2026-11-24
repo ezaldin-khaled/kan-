@@ -76,10 +76,11 @@ try {
     fs.writeFileSync(path.join(dir, "index.html"), page);
   }
 
-  const urls = paths
-    .map((url) => {
+  const entries = mod.sitemapEntries ?? paths.map((url) => ({ path: url, lastmod: "2026-11-24" }));
+  const urls = entries
+    .map(({ path: url, lastmod }) => {
       const loc = url === "/" ? "https://wearekan.com/" : `https://wearekan.com${url}`;
-      return `  <url><loc>${loc}</loc></url>`;
+      return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n  </url>`;
     })
     .join("\n");
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;

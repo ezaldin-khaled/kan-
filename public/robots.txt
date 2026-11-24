@@ -1,4 +1,19 @@
+# KAN — https://wearekan.com
+# Owner choices (2026-11-24), per RankMySEO seo-agent-readiness:
+# 1. Appear in AI search answers: yes
+# 2. Allow AI model training: yes
+# 3. Allow on-request reading when a person asks: yes
+# Content signals: search=yes, ai-train=yes, ai-input=yes
+#
+# Private Founders / portal / crew stay out of search and AI crawls.
+
 User-agent: *
+Allow: /
+Disallow: /k7n/
+Content-Signal: search=yes, ai-train=yes, ai-input=yes
+
+# OpenAI — search, training, and on-request reading
+User-agent: OAI-SearchBot
 Allow: /
 Disallow: /k7n/
 
@@ -6,7 +21,12 @@ User-agent: GPTBot
 Allow: /
 Disallow: /k7n/
 
-User-agent: PerplexityBot
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /k7n/
+
+# Anthropic
+User-agent: Claude-SearchBot
 Allow: /
 Disallow: /k7n/
 
@@ -18,7 +38,30 @@ User-agent: anthropic-ai
 Allow: /
 Disallow: /k7n/
 
+User-agent: Claude-User
+Allow: /
+Disallow: /k7n/
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+Disallow: /k7n/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /k7n/
+
+# Google — Search stays on *; Extended covers Gemini grounding
 User-agent: Google-Extended
+Allow: /
+Disallow: /k7n/
+
+# Apple
+User-agent: Applebot
+Allow: /
+Disallow: /k7n/
+
+User-agent: Applebot-Extended
 Allow: /
 Disallow: /k7n/
 
