@@ -68,6 +68,7 @@ function ServiceCard({ service }: { service: Service }) {
           ))}
         </ul>
 
+        {/* Timeline / Investment hidden for now — data stays in content/services.ts
         <dl className="mt-auto grid grid-cols-2 border-3 border-ink bg-paper">
           <div className="border-r-3 border-ink px-4 py-3">
             <dt className="label text-[11px] text-ink/60">Timeline</dt>
@@ -78,6 +79,7 @@ function ServiceCard({ service }: { service: Service }) {
             <dd className="label-lg mt-1">{service.investment}</dd>
           </div>
         </dl>
+        */}
 
         <div className="mt-6">
           {isExternal ? (
